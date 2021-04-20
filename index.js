@@ -3,6 +3,13 @@ const fs = require('fs');
 const { clear } = require('console');
 const markdown = require('./generateTeamProfile.js');
 
+const employeeTitle = [{
+  type: 'list',
+  message: 'Choose employee title',
+  name: 'employeeTitle',
+  choices: [`Manager`, `Engineer 1`, `Engineer 2`, `Intern`]
+}];
+
 const mgrQuestions = [{
   type: 'input',
   message: 'Enter Manager name:',
@@ -99,9 +106,7 @@ function init() {
 
 init();
 
-// team manager’s name, employee ID, email address, and office number
-// engineer’s name, ID, email, and GitHub username
-// intern’s name, ID, email, and school
+
 
 
 
