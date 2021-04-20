@@ -97,7 +97,6 @@ const internQuestions = [{
 
 
 
-
 function getTitle() {
   inquirer.prompt(employeeTitle)
   .then((data) => {
