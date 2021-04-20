@@ -1,4 +1,4 @@
-titlePrompt = () => {
+titleBasedPrompt = () => {
     if (employeeTitle.choices === "Manager") {
     inquirer.prompt(mgrQuestions)
   } else if (employeeTitle.choices === "Engineer 1") {
