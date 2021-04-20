@@ -1,112 +1,38 @@
-const inquirer = require('inquirer');
-const fs = require('fs');
-const { clear } = require('console');
-const profile = require('./generateTeamProfile.js');
-const tileChoice = require('./titleBasedPrompt.js')
+const inquirer = require("inquirer");
+const fs = require("fs");
+const { clear } = require("console");
+const profile = require("./generateTeamProfile.js");
 
-const employeeTitle = [{
-  type: 'list',
-  message: 'Choose employee title',
-  name: 'employeeTitle',
-  choices: [`Manager`, `Engineer 1`, `Engineer 2`, `Intern`,]
-}];
-
-const mgrQuestions = [{
-  type: 'input',
-  message: 'Enter Manager name:',
-  name: 'mgrName',
-},
-{
-  type: 'input',
-  message: 'Enter Manager employee ID:',
-  name: 'mgrID',
-},
-{
-type: 'input',
-message: 'Enter Manager email:',
-name: 'mgrEmail',
-},
-{
-type: 'input',
-message: 'Enter Manager office number:',
-name: 'mgrOffice',
-}];
-
-const eng1Questions = [{
-  type: 'input',
-  message: 'Enter Engineer 1 name:',
-  name: 'eng1Name',
-},
-{
-type: 'input',
-  message: 'Enter Engineer 1 employee ID:',
-  name: 'eng1ID',
-},
-{
-  type: 'input',
-    message: 'Enter Engineer 1 GitHub email:',
-    name: 'eng1Email',
-},
-{
-  type: 'input',
-    message: 'Enter Engineer 1 GitHub username:',
-    name: 'eng1GitHub',
-}];
-
-const eng2Questions = [{
-  type: 'input',
-  message: 'Enter Engineer 2 name:',
-  name: 'eng2Name',
-},
-{
-type: 'input',
-  message: 'Enter Engineer 2 employee ID:',
-  name: 'eng2ID',
-},
-{
-  type: 'input',
-    message: 'Enter Engineer 2 GitHub email:',
-    name: 'eng2Email',
-},
-{
-  type: 'input',
-    message: 'Enter Engineer 2 GitHub username:',
-    name: 'eng2GitHub',
-}];
-
-const internQuestions = [{
-  type: 'input',
-  message: 'Enter Intern name:',
-  name: 'internName',
-},
-{
-  type: 'input',
-  message: 'Enter Intern employee ID:',
-  name: 'internID', 
-},
-{
-  type: 'input',
-  message: 'Enter Intern email:',
-  name: 'internEmail', 
-},
-{
-  type: 'input',
-  message: 'Enter Intern school:',
-  name: 'internSchool', 
-}];
+const { pickEmployeeTitle, mgrQuestions, eng1Questions, eng2Questions, internQuestions } = require("./questions.js");
 
 
+
+
+
+// function getTitle() {
+//   inquirer.prompt(pickEmployeeTitle)
+//   .then((data) => {
+//     console.log(data.employeeTitle)
+//     return data.employeeTitle
+//   })
+// };
+// getTitle()
 
 function getTitle() {
-  inquirer.prompt(employeeTitle)
-  .then((data) => {
-    console.log(data.employeeTitle)
-    return data.employeeTitle 
-  })
-};
-getTitle()
-
-// titleBasedPrompt()
+  inquirer.prompt(pickEmployeeTitle).then((data) => {
+    console.log(data.employeeTitle);
+    if (data.employeeTitle === "Manager") {
+      inquirer.prompt(mgrQuestions);
+    } else if (data.employeeTitle === "Engineer 1") {
+      inquirer.prompt(eng1Questions);
+    } else if (data.employeeTitle === "Engineer 2") {
+      inquirer.prompt(eng2Questions);
+    } else {
+      inquirer.prompt(internQuestions);
+    }
+  });
+}
+getTitle();
 
 // class Manager {
 //   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
@@ -143,14 +69,3 @@ getTitle()
 //     this.internSchool = internSchool;
 //   }
 // }
-
-
-
-
-
-  
-
-
-
-
-
