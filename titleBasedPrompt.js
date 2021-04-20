@@ -9,3 +9,5 @@ titleBasedPrompt = () => {
     inquirer.prompt(internQuestions)
   }
 }; 
+
+module.exports = titleBasedPrompt;
