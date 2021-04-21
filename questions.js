@@ -15,83 +15,83 @@ module.exports = {
     {
       type: "input",
       message: "Enter Manager name:",
-      name: "mgrName",
+      name: "name",
     },
     {
       type: "input",
       message: "Enter Manager employee ID:",
-      name: "mgrID",
+      name: "id",
     },
     {
       type: "input",
       message: "Enter Manager email:",
-      name: "mgrEmail",
+      name: "email",
     },
     {
       type: "input",
       message: "Enter Manager office number:",
-      name: "mgrOffice",
+      name: "officeNumber",
     },
   ],
   eng1Questions: [
     {
       type: "input",
       message: "Enter Engineer 1 name:",
-      name: "eng1Name",
+      name: "name",
     },
     {
       type: "input",
       message: "Enter Engineer 1 employee ID:",
-      name: "eng1ID",
+      name: "id",
     },
     {
       type: "input",
       message: "Enter Engineer 1 email:",
-      name: "eng1Email",
+      name: "email",
     },
     {
       type: "input",
       message: "Enter Engineer 1 GitHub username:",
-      name: "eng1GitHub",
+      name: "gitHub",
     },
   ],
   eng2Questions: [
     {
       type: "input",
       message: "Enter Engineer 2 name:",
-      name: "eng2Name",
+      name: "name",
     },
     {
       type: "input",
       message: "Enter Engineer 2 employee ID:",
-      name: "eng2ID",
+      name: "id",
     },
     {
       type: "input",
       message: "Enter Engineer 2 email:",
-      name: "eng2Email",
+      name: "email",
     },
     {
       type: "input",
       message: "Enter Engineer 2 GitHub username:",
-      name: "eng2GitHub",
+      name: "gitHub",
     },
   ],
   internQuestions: [
     {
       type: "input",
       message: "Enter Intern name:",
-      name: "internName",
+      name: "name",
     },
     {
       type: "input",
       message: "Enter Intern employee ID:",
-      name: "internID",
+      name: "id",
     },
     {
       type: "input",
       message: "Enter Intern email:",
-      name: "internEmail",
+      name: "email",
     },
     {
       type: "input",

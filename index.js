@@ -14,7 +14,7 @@ const {
 
 function getMgrData() {
   inquirer.prompt(mgrQuestions).then((data) => {
-    console.log("Manager is " + data.mgrName);
+    console.log("Manager is " + data.name);
     addEmployee();
   });
 }
@@ -24,11 +24,10 @@ function addEmployee() {
   inquirer.prompt(addEmployeeYN).then((data) => {
     if (data.addEmployeeRes === "Yes") {
       getEmployeeData();
-    } 
+    }
     // if no, print html
   });
 }
-
 
 function getEmployeeData() {
   inquirer
@@ -36,50 +35,70 @@ function getEmployeeData() {
     .then((data) => {
       console.log(data.employeeTitle);
       if (data.employeeTitle === "Engineer 1") {
-        return(inquirer.prompt(eng1Questions));
+        return inquirer.prompt(eng1Questions);
       } else if (data.employeeTitle === "Engineer 2") {
-        return(inquirer.prompt(eng2Questions));
+        return inquirer.prompt(eng2Questions);
       } else {
-        return(inquirer.prompt(internQuestions));
+        return inquirer.prompt(internQuestions);
       }
-    }).then(() => addEmployee)
-};
-
+    })
+    .then(() => addEmployee());
+}
 
 // remember to extend classes
 
-// class Manager {
-//   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
-//     this.mgrName = mgrName;
-//     this.mgrID = mgrID;
-//     this.mgrEmail = mgrEmail;
-//     this.mgrOffice = mgrOffice
-//   }
-// }
+class Employee {
+  constructor(name, id, email) {
+    this.name = name;
+    this.id = id;
+    this.email = email;
+  }
+  getName() {
+    this.name.forEach((employee) => {
+      console.log(`Employee name is ${employee}`);
+    });
+  }
+  getId() {
+    this.id.forEach((employee) => {
+      console.log(`Employee ID is ${employee}`);
+    });
+  }
+  getEmail() {
+    this.email.forEach((employee) => {
+      console.log(`Employee email is ${employee}`);
+    });
+  }
+  // getRole() {
+  //   return Employee();
+  // }
+}
 
-// class Eng1 {
-//   constructor(eng1Name, eng1ID, eng1Email, eng1GitHub) {
-//     this.eng1Name = eng1Name;
-//     this.eng1ID = eng1ID;
-//     this.eng1email = eng1Email;
-//     this.eng1GitHub = eng1Github;
-//   }
-// }
+class Manager extends Employee {
+  constructor(officeNumber) {
+    const officeNumber = officeNumber;
+  }
+  // getRole overridden to return Manager
+}
 
-// class Eng2 {
-//   constructor(eng2Name, eng2ID, eng2Email, eng2GitHub) {
-//     this.eng2Name = eng2Name;
-//     this.eng2ID = eng2ID;
-//     this.eng2email = eng2Email;
-//     this.eng2GitHub = eng2Github;
-//   }
-// }
+class Engineer1 extends Employee {
+  constructor(gitHub) {
+    const gitHub = gitHub;
+  }
+  // getRole overridden to return Engineer1
+}
 
-// class Intern {
-//   constructor(internName, internID, internEmail, internSchool) {
-//     this.internName = internName;
-//     this.internID = internID;
-//     this.internEmail = internEmail;
-//     this.internSchool = internSchool;
-//   }
-// }
+class Engineer2 extends Employee {
+  constructor(gitHub) {
+    const gitHub = gitHub;
+  }
+  // getRole overridden to return Engineer2
+}
+
+class Intern extends Employee {
+  constructor(internSchool) {
+    const internSchool = internSchool
+  }
+  // getRole overridden to return Intern
+}
+
+
