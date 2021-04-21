@@ -5,7 +5,7 @@ module.exports = {
     name: "employeeTitle",
     choices: ["Engineer 1", "Engineer 2", "Intern"],
   },
-  addEmployeeBoolean: {
+  addEmployeeYN: {
     type: "list",
     message: "Would you like to add an employee?",
     name: "addEmployeeRes",

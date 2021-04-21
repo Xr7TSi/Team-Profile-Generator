@@ -3,16 +3,35 @@ const fs = require("fs");
 const { clear } = require("console");
 const profile = require("./generateTeamProfile.js");
 
-const { pickEmployeeTitle, mgrQuestions, eng1Questions, eng2Questions, internQuestions } = require("./questions.js");
+const {
+  pickEmployeeTitle,
+  mgrQuestions,
+  eng1Questions,
+  eng2Questions,
+  internQuestions,
+  addEmployeeBoolean,
+} = require("./questions.js");
 
+function getMgrData() {
+  inquirer.prompt(mgrQuestions).then((data) => {
+    console.log("Manager is " + data.mgrName);
+    addEmployee();
+  });
+}
+getMgrData();
 
+function addEmployee() {
+  inquirer.prompt(addEmployeeBoolean).then((data) => {
+    if (data.addEmployeeRes === "Yes") {
+      getEmployeeData();
+    }
+  });
+}
 
-function getTitle() {
+function getEmployeeData() {
   inquirer.prompt(pickEmployeeTitle).then((data) => {
     console.log(data.employeeTitle);
-    if (data.employeeTitle === "Manager") {
-      inquirer.prompt(mgrQuestions);
-    } else if (data.employeeTitle === "Engineer 1") {
+    if (data.employeeTitle === "Engineer 1") {
       inquirer.prompt(eng1Questions);
     } else if (data.employeeTitle === "Engineer 2") {
       inquirer.prompt(eng2Questions);
@@ -21,7 +40,6 @@ function getTitle() {
     }
   });
 }
-getTitle();
 
 // class Manager {
 //   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
@@ -58,3 +76,4 @@ getTitle();
 //     this.internSchool = internSchool;
 //   }
 // }
+
