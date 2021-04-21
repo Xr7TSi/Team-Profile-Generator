@@ -12,11 +12,11 @@ const {
   addEmployeeYN,
 } = require("./questions.js");
 
-const employee = require("./employeeFunctions/employee.js");
-const engineer1 = require("./employeeFunctions/engineer1.js");
-const engineer2 = require("./employeeFunctions/engineer2.js");
-const manager = require("./employeeFunctions/manager.js");
-const intern = require("./employeeFunctions/intern.js");
+// const employee = require("./employeeFunctions/employee.js");
+// const engineer1 = require("./employeeFunctions/engineer1.js");
+// const engineer2 = require("./employeeFunctions/engineer2.js");
+// const manager = require("./employeeFunctions/manager.js");
+// const intern = require("./employeeFunctions/intern.js");
 
 function getMgrData() {
   inquirer.prompt(mgrQuestions).then((data) => {
