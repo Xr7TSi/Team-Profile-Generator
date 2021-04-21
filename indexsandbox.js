@@ -9,7 +9,7 @@ const {
   eng1Questions,
   eng2Questions,
   internQuestions,
-  addEmployeeBoolean,
+  addEmployeeYN,
 } = require("./questions.js");
 
 function getMgrData() {
@@ -21,25 +21,32 @@ function getMgrData() {
 getMgrData();
 
 function addEmployee() {
-  inquirer.prompt(addEmployeeBoolean).then((data) => {
+  inquirer.prompt(addEmployeeYN).then((data) => {
     if (data.addEmployeeRes === "Yes") {
       getEmployeeData();
-    }
+    } 
+    // if no, print html
   });
 }
 
+
 function getEmployeeData() {
-  inquirer.prompt(pickEmployeeTitle).then((data) => {
-    console.log(data.employeeTitle);
-    if (data.employeeTitle === "Engineer 1") {
-      inquirer.prompt(eng1Questions);
-    } else if (data.employeeTitle === "Engineer 2") {
-      inquirer.prompt(eng2Questions);
-    } else {
-      inquirer.prompt(internQuestions);
-    }
-  });
-}
+  inquirer
+    .prompt(pickEmployeeTitle)
+    .then((data) => {
+      console.log(data.employeeTitle);
+      if (data.employeeTitle === "Engineer 1") {
+        return(inquirer.prompt(eng1Questions));
+      } else if (data.employeeTitle === "Engineer 2") {
+        return(inquirer.prompt(eng2Questions));
+      } else {
+        return(inquirer.prompt(internQuestions));
+      }
+    }).then(() => addEmployee)
+};
+
+
+// remember to extend classes
 
 // class Manager {
 //   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
@@ -76,4 +83,3 @@ function getEmployeeData() {
 //     this.internSchool = internSchool;
 //   }
 // }
-

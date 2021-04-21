@@ -24,9 +24,11 @@ function addEmployee() {
   inquirer.prompt(addEmployeeYN).then((data) => {
     if (data.addEmployeeRes === "Yes") {
       getEmployeeData();
-    }
+    } 
+    // if no, print html
   });
 }
+
 
 function getEmployeeData() {
   inquirer
@@ -34,14 +36,17 @@ function getEmployeeData() {
     .then((data) => {
       console.log(data.employeeTitle);
       if (data.employeeTitle === "Engineer 1") {
-        inquirer.prompt(eng1Questions);
+        return(inquirer.prompt(eng1Questions));
       } else if (data.employeeTitle === "Engineer 2") {
-        inquirer.prompt(eng2Questions);
+        return(inquirer.prompt(eng2Questions));
       } else {
-        inquirer.prompt(internQuestions);
+        return(inquirer.prompt(internQuestions));
       }
-    }).then(addEmployee())
+    }).then(() => addEmployee)
 };
+
+
+// remember to extend classes
 
 // class Manager {
 //   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
