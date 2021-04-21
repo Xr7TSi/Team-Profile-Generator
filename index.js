@@ -15,8 +15,8 @@ const {
 function getMgrData() {
   inquirer.prompt(mgrQuestions).then((data) => {
     console.log("Manager is " + data.mgrName);
-    getEmployeeData();
-  })
+    addEmployee();
+  });
 }
 getMgrData();
 
@@ -33,12 +33,13 @@ function getEmployeeData() {
   });
 }
 
-// function addEmployee() {
-//   inquirer.prompt(addEmployeeBoolean).then((data) => {
-//     console.log
-//   })
-// }
-
+function addEmployee() {
+  inquirer.prompt(addEmployeeBoolean).then((data) => {
+    if (data.addEmployeeRes === "Yes") {
+      getEmployeeData();
+    }
+  });
+}
 
 // class Manager {
 //   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
