@@ -1,9 +1,15 @@
 module.exports = {
   pickEmployeeTitle: {
     type: "list",
-    message: "Choose employee title",
+    message: "Choose next employee type:",
     name: "employeeTitle",
     choices: ["Engineer 1", "Engineer 2", "Intern"],
+  },
+  addEmployeeBoolean: {
+    type: "list",
+    message: "Would you like to add an employee?",
+    name: "addEmployeeRes",
+    choices: ["Yes", "No"]
   },
   mgrQuestions: [
     {

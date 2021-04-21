@@ -1,10 +1,5 @@
 module.exports = {
-    pickEmployeeTitle: {
-      type: "list",
-      message: "Choose employee title",
-      name: "employeeTitle",
-      choices: ["Manager", "Engineer 1", "Engineer 2", "Intern"],
-    },
+    
     mgrQuestions: [
       {
         type: "input",
@@ -27,6 +22,14 @@ module.exports = {
         name: "mgrOffice",
       },
     ],
+
+    pickEmployeeTitle: {
+      type: "list",
+      message: "Choose next employee type to input",
+      name: "employeeTitle",
+      choices: ["Manager", "Engineer 1", "Engineer 2", "Intern"],
+    },
+
     eng1Questions: [
       {
         type: "input",
@@ -49,6 +52,7 @@ module.exports = {
         name: "eng1GitHub",
       },
     ],
+
     eng2Questions: [
       {
         type: "input",
@@ -71,6 +75,7 @@ module.exports = {
         name: "eng2GitHub",
       },
     ],
+
     internQuestions: [
       {
         type: "input",

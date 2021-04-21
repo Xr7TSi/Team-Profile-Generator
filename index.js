@@ -9,9 +9,18 @@ const {
   eng1Questions,
   eng2Questions,
   internQuestions,
+  addEmployeeBoolean,
 } = require("./questions.js");
 
-function getTitle() {
+function getMgrData() {
+  inquirer.prompt(mgrQuestions).then((data) => {
+    console.log("Manager is " + data.mgrName);
+    getEmployeeData();
+  })
+}
+getMgrData();
+
+function getEmployeeData() {
   inquirer.prompt(pickEmployeeTitle).then((data) => {
     console.log(data.employeeTitle);
     if (data.employeeTitle === "Engineer 1") {
@@ -23,7 +32,13 @@ function getTitle() {
     }
   });
 }
-getTitle();
+
+// function addEmployee() {
+//   inquirer.prompt(addEmployeeBoolean).then((data) => {
+//     console.log
+//   })
+// }
+
 
 // class Manager {
 //   constructor(mgrName, mgrID, mgrEmail, mgrOffice) {
