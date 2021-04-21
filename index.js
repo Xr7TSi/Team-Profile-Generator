@@ -40,7 +40,7 @@ function getEmployeeData() {
       } else {
         inquirer.prompt(internQuestions);
       }
-    }).then(addEmployee)
+    }).then(addEmployee())
 };
 
 // class Manager {
