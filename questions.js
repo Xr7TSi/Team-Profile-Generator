@@ -3,7 +3,7 @@ module.exports = {
     type: "list",
     message: "Choose employee title",
     name: "employeeTitle",
-    choices: ["Manager", "Engineer 1", "Engineer 2", "Intern"],
+    choices: ["Engineer 1", "Engineer 2", "Intern"],
   },
   mgrQuestions: [
     {
@@ -40,7 +40,7 @@ module.exports = {
     },
     {
       type: "input",
-      message: "Enter Engineer 1 GitHub email:",
+      message: "Enter Engineer 1 email:",
       name: "eng1Email",
     },
     {
@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       type: "input",
-      message: "Enter Engineer 2 GitHub email:",
+      message: "Enter Engineer 2 email:",
       name: "eng2Email",
     },
     {

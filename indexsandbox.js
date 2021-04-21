@@ -3,18 +3,16 @@ const fs = require("fs");
 const { clear } = require("console");
 const profile = require("./generateTeamProfile.js");
 
-const {
-  pickEmployeeTitle,
-  mgrQuestions,
-  eng1Questions,
-  eng2Questions,
-  internQuestions,
-} = require("./questions.js");
+const { pickEmployeeTitle, mgrQuestions, eng1Questions, eng2Questions, internQuestions } = require("./questions.js");
+
+
 
 function getTitle() {
   inquirer.prompt(pickEmployeeTitle).then((data) => {
     console.log(data.employeeTitle);
-    if (data.employeeTitle === "Engineer 1") {
+    if (data.employeeTitle === "Manager") {
+      inquirer.prompt(mgrQuestions);
+    } else if (data.employeeTitle === "Engineer 1") {
       inquirer.prompt(eng1Questions);
     } else if (data.employeeTitle === "Engineer 2") {
       inquirer.prompt(eng2Questions);
