@@ -68,37 +68,39 @@ class Employee {
       console.log(`Employee email is ${employee}`);
     });
   }
-  // getRole() {
-  //   return Employee();
-  // }
+  getRole() {
+    // return employee
+  }
 }
 
 class Manager extends Employee {
   constructor(officeNumber) {
-    const officeNumber = officeNumber;
+    super(name, id, email);
+    this.officeNumber = officeNumber;
   }
   // getRole overridden to return Manager
 }
 
 class Engineer1 extends Employee {
   constructor(gitHub) {
-    const gitHub = gitHub;
+    super(name, id, email);
+    this.gitHub = gitHub;
   }
   // getRole overridden to return Engineer1
 }
 
 class Engineer2 extends Employee {
   constructor(gitHub) {
-    const gitHub = gitHub;
+    super(name, id, email);
+    this.gitHub = gitHub;
   }
   // getRole overridden to return Engineer2
 }
 
 class Intern extends Employee {
   constructor(internSchool) {
-    const internSchool = internSchool
+    super(name, id, email);
+    this.internSchool = internSchool;
   }
   // getRole overridden to return Intern
 }
-
-
