@@ -1,7 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const { clear } = require("console");
-const profile = require("./generateTeamProfile.js");
+const genProfile = require("./generateTeamProfile.js");
 
 const {
   pickEmployeeTitle,
