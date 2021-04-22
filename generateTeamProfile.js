@@ -1,6 +1,12 @@
-      
-function renderHTML() {
-    return `
+function renderHTML(data) {
+  
+  const Manager = require("./employeeClasses/manager.js");
+
+  function renderMgr() {
+    return Manager;
+  }
+
+  return `
         <!DOCTYPE html>
 
 <html>
@@ -13,17 +19,13 @@ function renderHTML() {
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>Here's some text!</h1>
-        
+        <h1>Here's some text!</h1> 
+        <h1> ${renderMgr(data.name)}</h1>
+
         <script src="" async defer></script>
     </body>
 </html>`;
-  }
-  
-
-// function renderMgr() {
-
-// }
+}
 
 // function renderEng1() {
 
@@ -37,7 +39,4 @@ function renderHTML() {
 
 // }
 
-
 module.exports = renderHTML;
-
-
