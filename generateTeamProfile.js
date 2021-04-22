@@ -1,18 +1,23 @@
-function renderMgr() {
-
+function genProfile() {
+  return 
+ "Hello world!"
 }
 
-function renderEng1() {
+// function renderMgr() {
 
-}
+// }
 
-function renderEng2() {
+// function renderEng1() {
 
-}
+// }
 
-function renderIntern() {
-    
-}
+// function renderEng2() {
+
+// }
+
+// function renderIntern() {
+
+// }
 
 
-
+module.exports = genProfile

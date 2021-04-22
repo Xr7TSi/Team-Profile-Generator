@@ -51,10 +51,15 @@ function getEmployeeData() {
     .then(() => addEmployee());
 }
 
-fs.appendFile('team-profile.html', 'generateTeamProfile content goes here', function (err) {
+fs.appendFile('team-profile.html', genProfile(), function (err) {
   if (err) throw err;
   console.log('Team Profile generated.');
 });
+
+// fs.appendFile('team-profile.html', "Hi there!", function (err) {
+//   if (err) throw err;
+//   console.log('Team Profile generated.');
+// });
 
 
 
