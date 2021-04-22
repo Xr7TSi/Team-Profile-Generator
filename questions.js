@@ -96,7 +96,7 @@ module.exports = {
     {
       type: "input",
       message: "Enter Intern school:",
-      name: "internSchool",
+      name: "school",
     },
   ],
 };
