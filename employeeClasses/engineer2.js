@@ -3,12 +3,12 @@ class Engineer2 extends Employee {
     super(name, id, email);
     this.gitHub = gitHub;
   }
-  getGitHub2() {
-    this.gitHub.forEach((data) => {
-      console.log(`Engineer2 GitHib username is ${data}`);
-    });
+  getGitHub() {
+    return this.gitHub;
   }
-  // getRole overridden to return Engineer2
+  getRole() {
+    return this.name;
+  }
 }
 
 module.exports = Engineer2;

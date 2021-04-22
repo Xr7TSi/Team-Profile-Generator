@@ -5,22 +5,16 @@ class Employee {
     this.email = email;
   }
   getName() {
-    this.name.forEach((data) => {
-      console.log(`Employee name is ${data}`);
-    });
+    return this.name;
   }
   getId() {
-    this.id.forEach((data) => {
-      console.log(`Employee ID is ${data}`);
-    });
+    return this.id;
   }
   getEmail() {
-    this.email.forEach((data) => {
-      console.log(`Employee email is ${data}`);
-    });
+    return this.email;
   }
   getRole() {
-    // return employee
+    return "Employee";
   }
 }
 
