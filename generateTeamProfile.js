@@ -1,7 +1,6 @@
 function genProfile() {
-  return;
-  ("Hello world!");
-}
+    return "Hello world!";
+  }
 
 // function renderMgr() {
 
