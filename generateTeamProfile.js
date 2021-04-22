@@ -2,6 +2,7 @@ function getMgrName() {
   name = "Fred";
 }
 
+
 function renderMgrName() {
   return name;
 }
