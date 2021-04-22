@@ -1,5 +1,5 @@
-function getMgrName() {
-  name = "Fred";
+function getMgrName(data) {
+  name = data.name;
 }
 
 

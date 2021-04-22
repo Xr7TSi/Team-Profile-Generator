@@ -30,7 +30,7 @@ module.exports = {
     {
       type: "input",
       message: "Enter Manager office number:",
-      name: "officeNumber",
+      name: "office",
     },
   ],
   eng1Questions: [

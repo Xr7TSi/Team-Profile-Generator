@@ -21,26 +21,28 @@ const {
 function getMgrData() {
   inquirer.prompt(mgrQuestions).then((data) => {
     console.log("Manager is " + data.name);
+    (mgrName = data.name),
+    (mgrId = data.id),
+    (mgrEmail = data.email),
+    (mgrOffice = data.office);
+
     addEmployee();
   });
 }
 getMgrData();
 
-
 function addEmployee() {
   inquirer.prompt(addEmployeeYN).then((data) => {
     if (data.addEmployeeRes === "Yes") {
       getEmployeeData();
-    }
-    else{
-      fs.appendFile('team-profile.html', genProfile(), function (err) {
+    } else {
+      fs.appendFile("team-profile.html", genProfile(data), function (err) {
         if (err) throw err;
-        console.log('Team Profile generated.');
+        console.log("Team Profile generated.");
       });
     }
   });
 }
-
 
 function getEmployeeData() {
   inquirer
@@ -48,26 +50,34 @@ function getEmployeeData() {
     .then((data) => {
       console.log(data.employeeTitle);
       if (data.employeeTitle === "Engineer 1") {
-        return inquirer.prompt(eng1Questions);
+        return inquirer
+          .prompt(eng1Questions)
+          .then(
+            (eng1Name = data.name),
+            (eng1Id = data.id),
+            (eng1Email = data.email),
+            (eng1Github = data.gitHub)
+          );
       } else if (data.employeeTitle === "Engineer 2") {
-        return inquirer.prompt(eng2Questions);
+        return inquirer
+          .prompt(eng2Questions)
+          .then(
+            (eng2Name = data.name),
+            (eng2Id = data.id),
+            (eng2Email = data.email),
+            (eng2Github = data.gitHub)
+          );
       } else {
-        return inquirer.prompt(internQuestions);
+        return inquirer
+          .prompt(internQuestions)
+          .then(
+            (internName = data.name),
+            (internId = data.id),
+            (internEmail = data.email),
+            (internGithub = data.gitHub),
+            (internSchool = data.school)
+          );
       }
     })
     .then(() => addEmployee());
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
