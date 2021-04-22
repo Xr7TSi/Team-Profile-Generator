@@ -15,17 +15,16 @@ const {
 // const employee = require("./employeeClasses/employee.js");
 // const engineer1 = require("./employeeClasses/engineer1.js");
 // const engineer2 = require("./employeeClasses/engineer2.js");
-// const manager = require("./employeeClasses/manager.js");
+const manager = require("./employeeClasses/manager.js");
 // const intern = require("./employeeClasses/intern.js");
 
 function getMgrData() {
   inquirer.prompt(mgrQuestions).then((data) => {
-    console.log("Manager is " + data.name);
-    (mgrName = data.name),
-    (mgrId = data.id),
-    (mgrEmail = data.email),
-    (mgrOffice = data.office);
-
+    const mgrName = data.name
+    const mgrId = data.id
+    const mgrEmail = data.email
+    const mgrOffice = data.office
+    const newMgr = new Manager(mgrName, mgrId, mgrEmail, mgrOffice)
     addEmployee();
   });
 }
@@ -48,35 +47,28 @@ function getEmployeeData() {
   inquirer
     .prompt(pickEmployeeTitle)
     .then((data) => {
-      console.log(data.employeeTitle);
       if (data.employeeTitle === "Engineer 1") {
-        return inquirer
-          .prompt(eng1Questions)
-          .then(
-            (eng1Name = data.name),
+        return inquirer.prompt(eng1Questions).then((data) => {
+          (eng1Name = data.name),
             (eng1Id = data.id),
             (eng1Email = data.email),
-            (eng1Github = data.gitHub)
-          );
+            (eng1Github = data.gitHub);
+        });
       } else if (data.employeeTitle === "Engineer 2") {
-        return inquirer
-          .prompt(eng2Questions)
-          .then(
-            (eng2Name = data.name),
+        return inquirer.prompt(eng2Questions).then((data) => {
+          (eng2Name = data.name),
             (eng2Id = data.id),
             (eng2Email = data.email),
-            (eng2Github = data.gitHub)
-          );
+            (eng2Github = data.gitHub);
+        });
       } else {
-        return inquirer
-          .prompt(internQuestions)
-          .then(
-            (internName = data.name),
+        return inquirer.prompt(internQuestions).then((data) => {
+          (internName = data.name),
             (internId = data.id),
             (internEmail = data.email),
             (internGithub = data.gitHub),
-            (internSchool = data.school)
-          );
+            (internSchool = data.school);
+        });
       }
     })
     .then(() => addEmployee());

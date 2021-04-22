@@ -1,5 +1,5 @@
 function getMgrName(data) {
-  name = data.name;
+  mgrNam = data.name;
 }
 
 
