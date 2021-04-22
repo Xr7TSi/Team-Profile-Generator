@@ -1,6 +1,6 @@
 function genProfile() {
-  return 
- "Hello world!"
+  return;
+  ("Hello world!");
 }
 
 // function renderMgr() {
@@ -19,5 +19,4 @@ function genProfile() {
 
 // }
 
-
-module.exports = genProfile
+module.exports = genProfile;
