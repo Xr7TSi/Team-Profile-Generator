@@ -18,6 +18,11 @@ const Engineer1 = require("./employeeClasses/engineer1.js");
 const Engineer2 = require("./employeeClasses/engineer2.js");
 const Intern = require("./employeeClasses/intern.js");
 
+let manager = null;
+let engineer1 = null;
+let engineer2 = null;
+let intern  = null;
+
 
 function getMgrData() {
   inquirer.prompt(mgrQuestions).then((data) => {
@@ -25,9 +30,8 @@ function getMgrData() {
     const mgrId = data.id;
     const mgrEmail = data.email;
     const mgrOffice = data.office;
-    const newMgr = new Manager(mgrName, mgrId, mgrEmail, mgrOffice);
-    return newMgr,
-    console.log(newMgr),
+    manager = new Manager(mgrName, mgrId, mgrEmail, mgrOffice);
+    console.log(manager),
     addEmployee(data);
   });
 }
@@ -38,7 +42,7 @@ function addEmployee() {
     if (data.addEmployeeRes === "Yes") {
       getEmployeeData();
     } else {
-      fs.appendFile("team-profile.html", genProfile(data), function (err) {
+      fs.appendFile("team-profile.html", genProfile(manager, engineer1, engineer2, intern), function (err) {
         if (err) throw err;
         console.log("Team Profile generated.");
       });
@@ -56,14 +60,13 @@ function getEmployeeData() {
           const eng1Id = data.id;
           const eng1Email = data.email;
           const eng1Github = data.gitHub;
-          const newEng1 = new Engineer1(
+          engineer1 = new Engineer1(
             eng1Name,
             eng1Id,
             eng1Email,
             eng1Github
           );
-          return newEng1,
-          console.log(newEng1)
+          console.log(engineer1)
         });
       } else if (data.employeeTitle === "Engineer 2") {
         return inquirer.prompt(eng2Questions).then((data) => {
@@ -71,14 +74,13 @@ function getEmployeeData() {
           const eng2Id = data.id;
           const eng2Email = data.email;
           const eng2Github = data.gitHub;
-          const newEng2 = new Engineer2(
+          engineer2 = new Engineer2(
             eng2Name,
             eng2Id,
             eng2Email,
             eng2Github
           );
-          return newEng2,
-          console.log(newEng2)
+          console.log(engineer2)
         });
       } else {
         return inquirer.prompt(internQuestions).then((data) => {
@@ -86,16 +88,33 @@ function getEmployeeData() {
           const internId = data.id;
           const internEmail = data.email;
           const internSchool = data.school;
-          const newIntern = new Intern(
+          intern = new Intern(
             internName,
             internId,
             internEmail,
             internSchool
           );
-          return newIntern,
-          console.log(newIntern)
+          console.log(intern)
         });
       }
     })
     .then(() => addEmployee());
 }
+
+
+
+
+
+
+
+
+// manager = new Manager(mgrName, mgrId, mgrEmail, mgrOffice);
+
+
+// // Call function to generate HTML
+// genProfile(manager);
+
+// // Function Declaration: Accepts `manager` from `index.js`
+// function renderHTML(manager) {
+//     console.log(manager);
+// }

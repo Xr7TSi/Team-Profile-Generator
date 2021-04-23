@@ -1,17 +1,13 @@
-const manager = require("./employeeClasses/manager.js");
-const engineer1 = require("./employeeClasses/manager.js");
-const engineer2 = require("./employeeClasses/manager.js");
-const intern = require("./employeeClasses/manager.js");
-
-function returnNewMgr() {
-  return manager.name,
-  console.log(manager.name)
-}
+// const manager = require("./employeeClasses/manager.js");
+// const engineer1 = require("./employeeClasses/manager.js");
+// const engineer2 = require("./employeeClasses/manager.js");
+// const intern = require("./employeeClasses/manager.js");
 
 
 
-function renderHTML() {
-    returnNewMgr()
+
+function renderHTML(manager, engineer1, engineer2, intern) {
+    
   
   return `
         <!DOCTYPE html>
@@ -26,7 +22,13 @@ function renderHTML() {
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <h1>Here's some text!</h1> 
+        <h1>Here's some text!</h1>
+        <h1> ${manager.name}</h1>
+        <h1> ${engineer1.name}</h1>
+        <h1> ${engineer2.name}</h1>
+        <h1> ${intern.name}</h1>
+        
+
        
 
         <script src="" async defer></script>
@@ -35,3 +37,6 @@ function renderHTML() {
 }
 
 module.exports = renderHTML;
+
+
+
