@@ -1,11 +1,11 @@
-function getMgrName(data) {
-  mgrNam = data.name;
-}
 
 
-function renderMgrName() {
-  return name;
-}
+const Manager = require("./employeeClasses/manager");
+
+
+
+
+
 
 function renderHTML(data) {
   getMgrName(data);
@@ -24,7 +24,7 @@ function renderHTML(data) {
     </head>
     <body>
         <h1>Here's some text!</h1> 
-        <h1> ${renderMgrName()}</h1>
+        <h1> ${Manager.name()}</h1>
 
         <script src="" async defer></script>
     </body>
