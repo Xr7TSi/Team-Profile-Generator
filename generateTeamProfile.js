@@ -5,19 +5,19 @@ const engineer2 = require("./employeeClasses/manager.js");
 const intern = require("./employeeClasses/manager.js");
 
 function returnMgr() {
-  return manager;
+  return manager.name;
 }
 
 function returnEng1() {
-  return engineer1;
+  return engineer1.name;
 }
 
 function returnEng2() {
-  return Engineer2;
+  return engineer2.name;
 }
 
 function returnIntern() {
-  return intern;
+  return intern.name;
 }
 
 function renderHTML(data) {
