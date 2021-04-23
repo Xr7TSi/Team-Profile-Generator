@@ -61,7 +61,7 @@ function getEmployeeData() {
           const eng2Id = data.id
           const eng2Email = data.email
           const eng2Github = data.gitHub
-          const newEng2 = new Engineer2(ng2Name, eng2Id, eng2Email, eng2Github)
+          const newEng2 = new Engineer2(eng2Name, eng2Id, eng2Email, eng2Github)
         });
       } else {
         return inquirer.prompt(internQuestions).then((data) => {

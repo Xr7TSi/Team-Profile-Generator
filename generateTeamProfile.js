@@ -1,9 +1,27 @@
-const Manager = require("./employeeClasses/manager.js");
+const Engineer2 = require("./employeeClasses/engineer2.js");
+const manager = require("./employeeClasses/manager.js");
+const engineer1 = require("./employeeClasses/manager.js");
+const engineer2 = require("./employeeClasses/manager.js");
+const intern = require("./employeeClasses/manager.js");
 
+function returnMgr() {
+  return manager;
+}
+
+function returnEng1() {
+  return engineer1;
+}
+
+function returnEng2() {
+  return Engineer2;
+}
+
+function returnIntern() {
+  return intern;
+}
 
 function renderHTML(data) {
-  getMgrName(data);
-
+  
   return `
         <!DOCTYPE html>
 
@@ -18,7 +36,10 @@ function renderHTML(data) {
     </head>
     <body>
         <h1>Here's some text!</h1> 
-        <h1> ${Manager.name()}</h1>
+        <h1> ${returnMgr(data.name)}</h1>
+        <h1> ${returnEng1(data.name)}</h1>
+        <h1> ${returnEng2(data.name)}</h1>
+        <h1> ${returnIntern(data.name)}</h1>
 
         <script src="" async defer></script>
     </body>
