@@ -49,25 +49,27 @@ function getEmployeeData() {
     .then((data) => {
       if (data.employeeTitle === "Engineer 1") {
         return inquirer.prompt(eng1Questions).then((data) => {
-          (eng1Name = data.name),
-            (eng1Id = data.id),
-            (eng1Email = data.email),
-            (eng1Github = data.gitHub);
+          const eng1Name = data.name
+          const eng1Id = data.id
+          const eng1Email = data.email
+          const eng1Github = data.gitHub
+          const newEng1 = new Engineer1(eng1Name, eng1Id, eng1Email, eng1Github)
         });
       } else if (data.employeeTitle === "Engineer 2") {
         return inquirer.prompt(eng2Questions).then((data) => {
-          (eng2Name = data.name),
-            (eng2Id = data.id),
-            (eng2Email = data.email),
-            (eng2Github = data.gitHub);
+          const eng2Name = data.name
+          const eng2Id = data.id
+          const eng2Email = data.email
+          const eng2Github = data.gitHub
+          const newEng2 = new Engineer2(ng2Name, eng2Id, eng2Email, eng2Github)
         });
       } else {
         return inquirer.prompt(internQuestions).then((data) => {
-          (internName = data.name),
-            (internId = data.id),
-            (internEmail = data.email),
-            (internGithub = data.gitHub),
-            (internSchool = data.school);
+          const internName = data.name
+          const internId = data.id
+          const internEmail = data.email
+          const internSchool = data.school
+          const newIntern = new Intern(internName, internId, internEmail, internSchool)
         });
       }
     })
