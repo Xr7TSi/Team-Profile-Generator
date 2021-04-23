@@ -1,3 +1,5 @@
+const Employee = require('./employee.js')
+
 class Engineer2 extends Employee {
   constructor(gitHub) {
     super(name, id, email);
