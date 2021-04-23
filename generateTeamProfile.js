@@ -1,10 +1,4 @@
-
-
-const Manager = require("./employeeClasses/manager");
-
-
-
-
+const Manager = require("./employeeClasses/manager.js");
 
 
 function renderHTML(data) {
