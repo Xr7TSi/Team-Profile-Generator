@@ -1,5 +1,5 @@
 const { test, expect } = require("@jest/globals");
-const Engineer1 = require("C:/Users/jrein/gt-bootcamp/homework/Team-Profile-Generator/employeeClasses/engineer1.js");
+const Engineer1 = require("../employeeClasses/engineer1.js");
 
 test("creates engineer1 name instance", () => {
   const name = "Gus Fring";
