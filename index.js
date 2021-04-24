@@ -29,7 +29,6 @@ function getMgrData() {
     const mgrEmail = data.email;
     const mgrOffice = data.office;
     manager = new Manager(mgrName, mgrId, mgrEmail, mgrOffice);
-    console.log(manager), addEmployee(data);
   });
 }
 getMgrData();
@@ -62,7 +61,6 @@ function getEmployeeData() {
           const eng1Email = data.email;
           const eng1Github = data.gitHub;
           engineer1 = new Engineer1(eng1Name, eng1Id, eng1Email, eng1Github);
-          console.log(engineer1);
         });
       } else if (data.employeeTitle === "Engineer 2") {
         return inquirer.prompt(eng2Questions).then((data) => {
@@ -71,7 +69,6 @@ function getEmployeeData() {
           const eng2Email = data.email;
           const eng2Github = data.gitHub;
           engineer2 = new Engineer2(eng2Name, eng2Id, eng2Email, eng2Github);
-          console.log(engineer2);
         });
       } else {
         return inquirer.prompt(internQuestions).then((data) => {
@@ -80,7 +77,6 @@ function getEmployeeData() {
           const internEmail = data.email;
           const internSchool = data.school;
           intern = new Intern(internName, internId, internEmail, internSchool);
-          console.log(intern);
         });
       }
     })
