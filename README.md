@@ -31,7 +31,9 @@
 
   ## Tests: 
 
-  #### No testing needed.
+  #### From the command line,  run npm init -y,  then  npm install --save-dev jest.
+  #### In package.json, update "test: to "jest".
+  #### Run test from the command line: npm test.
   &nbsp;
   
   ## Questions?
