@@ -1,5 +1,4 @@
-function renderHTML(manager, engineer1, engineer2, intern) {
-  return `
+
     <!DOCTYPE html>
 
     <html>
@@ -38,10 +37,10 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           <div class="col-md-12">
             <div class="card">
               <div class="card-body">
-                Manager: ${manager.name} <br />
-                Employee ID: ${manager.id} <br />
-                Email: <a href="mailto: ${manager.email}">${manager.email}</a> <br />
-                Office Number: ${manager.office}
+                Manager: Car Smith <br />
+                Employee ID: cs123 <br />
+                Email: <a href="mailto: carl@gmail.com">carl@gmail.com</a> <br />
+                Office Number: 345
               </div>
             </div>
           </div>
@@ -55,10 +54,10 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
-                Engineer: ${engineer1.name} <br />
-                Employee ID: ${engineer1.id} <br />
-                Email: <a href="mailto: ${engineer1.email}">${engineer1.email}</a> <br/>
-                Github Username: <a href="https://github.com/${engineer1.gitHub}">${engineer1.gitHub}</a> <br/>
+                Engineer: Jen Swanson <br />
+                Employee ID: js746 <br />
+                Email: <a href="mailto: jen@gmail.com">jen@gmail.com</a> <br/>
+                Github Username: <a href="https://github.com/jengithub">jengithub</a> <br/>
               </div>
             </div>
           </div>
@@ -66,10 +65,10 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
-                Engineer: ${engineer2.name} <br />
-                Employee ID: ${engineer2.id} <br />
-                Email: <a href="mailto: ${engineer2.email}">${engineer2.email}</a> <br/>
-                Github Username: <a href="https://github.com/${engineer2.gitHub}">${engineer2.gitHub}</a> <br/>
+                Engineer: Steve Jones <br />
+                Employee ID: sj836 <br />
+                Email: <a href="mailto: stever@gmail.com">stever@gmail.com</a> <br/>
+                Github Username: <a href="https://github.com/stgithub">stgithub</a> <br/>
               </div>
             </div>
           </div>
@@ -82,17 +81,14 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           <div class="col-md-12">
             <div class="card">
               <div class="card-body">
-                Intern: ${intern.name} <br />
-                Employee ID: ${intern.id} <br />
-                Email: <a href="mailto: ${intern.email}">${intern.email}</a> <br/>
-                Intern School: ${intern.school}
+                Intern: Tim Bryant <br />
+                Employee ID: 856 <br />
+                Email: <a href="mailto: tim@gmail.com">tim@gmail.com</a> <br/>
+                Intern School: GA Tech
               </div>
             </div>
           </div>
         </div>
       </body>
     </html>
-    `;
-}
-
-module.exports = renderHTML;
+    
