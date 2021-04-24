@@ -60,7 +60,7 @@ function renderHTML(manager, engineer1, engineer2, intern) {
                 Engineer: ${engineer1.name} <br />
                 Employee ID: ${engineer1.id} <br />
                 <a href="${engineer1.email}">Email: ${engineer1.email}</a> <br/>
-                <a href="${engineer1.github}">Github Username: ${engineer1.github}</a> <br/>
+                <a href="${engineer1.gitHub}">Github Username: ${engineer1.github}</a> <br/>
               </div>
             </div>
           </div>
@@ -71,7 +71,7 @@ function renderHTML(manager, engineer1, engineer2, intern) {
                 Engineer: ${engineer2.name} <br />
                 Employee ID: ${engineer2.id} <br />
                 <a href="${engineer2.email}">Email: ${engineer2.email}</a> <br/>
-                <a href="${engineer1.github}">Github Username: ${engineer1.github}</a> <br/>
+                <a href="${engineer2.gitHub}">Github Username: ${engineer2.github}</a> <br/>
               </div>
             </div>
           </div>

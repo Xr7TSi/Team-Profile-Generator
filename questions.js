@@ -7,9 +7,9 @@ module.exports = {
   },
   addEmployeeYN: {
     type: "list",
-    message: "Would you like to add an employee or publish generate you HTML?",
+    message: "Would you like to add an employee, or generate your Team Profile?",
     name: "addEmployeeRes",
-    choices: ["Add another employee", "Generate HTML"]
+    choices: ["Add an employee", "Generate HTML"]
   },
   mgrQuestions: [
     {
