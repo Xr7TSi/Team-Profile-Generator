@@ -36,7 +36,7 @@ getMgrData();
 
 function addEmployee() {
   inquirer.prompt(addEmployeeYN).then((data) => {
-    if (data.addEmployeeRes === "Yes") {
+    if (data.addEmployeeRes === "Add another employee") {
       getEmployeeData();
     } else {
       fs.appendFile(
