@@ -31,8 +31,8 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           style="
             margin-bottom: 10px;
             margin-top: 10px;
-            margin-left: 20px;
-            margin-right: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
           "
         >
           <!-- Manager Section -->
@@ -78,7 +78,7 @@ function renderHTML(manager, engineer1, engineer2, intern) {
         </div>
         <div
           class="row"
-          style="margin-bottom: 10px; margin-left: 20px; margin-right: 20px"
+          style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px"
         >
           <!-- Intern Section -->
           <div class="col-md-12">
@@ -93,7 +93,8 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           </div>
         </div>
       </body>
-    </html>`;
+    </html>
+    `;
 }
 
 module.exports = renderHTML;
