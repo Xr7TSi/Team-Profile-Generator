@@ -29,6 +29,7 @@ function getMgrData() {
     const mgrEmail = data.email;
     const mgrOffice = data.office;
     manager = new Manager(mgrName, mgrId, mgrEmail, mgrOffice);
+    addEmployee()
   });
 }
 getMgrData();
