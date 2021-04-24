@@ -7,9 +7,10 @@ module.exports = {
   },
   addEmployeeYN: {
     type: "list",
-    message: "Would you like to add an employee, or generate your Team Profile?",
+    message:
+      "Would you like to add an employee, or generate your Team Profile?",
     name: "addEmployeeRes",
-    choices: ["Add an employee", "Generate HTML"]
+    choices: ["Add an employee", "Generate HTML"],
   },
   mgrQuestions: [
     {
@@ -26,6 +27,15 @@ module.exports = {
       type: "input",
       message: "Enter Manager email:",
       name: "email",
+      validate: function (email) {
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        if (valid) {
+          return true;
+        } else {
+          console.log("    Email entry invalid. Please enter a valid email");
+          return false;
+        }
+      },
     },
     {
       type: "input",
@@ -48,6 +58,15 @@ module.exports = {
       type: "input",
       message: "Enter Engineer 1 email:",
       name: "email",
+      validate: function (email) {
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        if (valid) {
+          return true;
+        } else {
+          console.log("    Email entry invalid. Please enter a valid email");
+          return false;
+        }
+      },
     },
     {
       type: "input",
@@ -70,6 +89,15 @@ module.exports = {
       type: "input",
       message: "Enter Engineer 2 email:",
       name: "email",
+      validate: function (email) {
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        if (valid) {
+          return true;
+        } else {
+          console.log("    Email entry invalid. Please enter a valid email");
+          return false;
+        }
+      },
     },
     {
       type: "input",
@@ -92,6 +120,15 @@ module.exports = {
       type: "input",
       message: "Enter Intern email:",
       name: "email",
+      validate: function (email) {
+        valid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+        if (valid) {
+          return true;
+        } else {
+          console.log("    Email entry invalid. Please enter a valid email");
+          return false;
+        }
+      },
     },
     {
       type: "input",
