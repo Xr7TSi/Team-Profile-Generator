@@ -19,21 +19,32 @@ function renderHTML(manager, engineer1, engineer2, intern) {
       </head>
     
       <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid" style="background-color:blue">
-          <span class="navbar-brand mb-0 h1" style="margin-left: 10px; color:white">Team Profile</span>
+        <div class="container-fluid" style="background-color: blue">
+          <span class="navbar-brand mb-0 h1" style="margin-left: 10px; color: white"
+            >Team Profile</span
+          >
         </div>
       </nav>
-      <body style="background-color:rgb(134, 134, 141)">
+      <body style="background-color: rgb(134, 134, 141)">
         <div
           class="row"
-          style="margin-bottom: 10px; margin-top:10px; margin-left: 20px; margin-right: 20px"
+          style="
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 20px;
+          "
         >
-          <div class="card">
-            <div class="card-body">
-              Manager: ${manager.name} <br />
-              Employee ID: ${manager.id} <br />
-              <a href="mailto: ${manager.email}">Email: ${manager.email}</a> <br/>
-              Office Number: ${manager.office}
+          <!-- Manager Section -->
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                Manager: ${manager.name} <br />
+                Employee ID: ${manager.id} <br />
+                <a href="mailto: ${manager.email}">Email: ${manager.email}</a>
+                <br />
+                Office Number: ${manager.office}
+              </div>
             </div>
           </div>
         </div>
@@ -42,23 +53,25 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           class="row"
           style="margin-bottom: 10px; margin-left: 10px; margin-right: 10px"
         >
+          <!-- Engineer1 Section -->
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
                 Engineer: ${engineer1.name} <br />
                 Employee ID: ${engineer1.id} <br />
-                Email: ${engineer1.email} <br />
-                Github Username: ${engineer1.email} <br />
+                <a href="${engineer1.email}">Email: ${engineer1.email}</a> <br/>
+                <a href="${engineer1.github}">Github Username: ${engineer1.github}</a> <br/>
               </div>
             </div>
           </div>
+          <!-- Engineer2 Section -->
           <div class="col-md-6">
             <div class="card">
               <div class="card-body">
                 Engineer: ${engineer2.name} <br />
                 Employee ID: ${engineer2.id} <br />
-                Email: ${engineer2.email} <br />
-                Github Username: ${engineer2.email} <br />
+                <a href="${engineer2.email}">Email: ${engineer2.email}</a> <br/>
+                <a href="${engineer1.github}">Github Username: ${engineer1.github}</a> <br/>
               </div>
             </div>
           </div>
@@ -67,12 +80,15 @@ function renderHTML(manager, engineer1, engineer2, intern) {
           class="row"
           style="margin-bottom: 10px; margin-left: 20px; margin-right: 20px"
         >
-          <div class="card">
-            <div class="card-body">
-              Intern: ${intern.name} <br />
-              Employee ID: ${intern.id} <br />
-              Email: ${intern.email} <br />
-              Intern School: ${intern.school}
+          <!-- Intern Section -->
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                Intern: ${intern.name} <br />
+                Employee ID: ${intern.id} <br />
+                <a href="${intern.email}">Email: ${intern.email}</a> <br/>
+                Intern School: ${intern.school}
+              </div>
             </div>
           </div>
         </div>
