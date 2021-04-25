@@ -8,32 +8,37 @@
   #### [Description](#description:)
   #### [Installation](#installation:)
   #### [Usage](#usage;)
-  #### [Contributing](#contributing:)
   #### [Tests](#tests:)
   #### [Questions](#questions:)
   #### [License](#license:)
   &nbsp;
+
+[See Team Profile Generator on GitHub](https://github.com/Xr7TSi/Team-Profile-Generator)
+
+![Team Profile Generator](./Assets/Team-Profile.png)
   
   ## Description: 
 
-  #### This application constructs a Team Profile HTML file based on user input
+  #### This application constructs a Team Profile HTML file based on user input.
   &nbsp;
 
   ## Installation: 
 
-  #### From the command line, run npm install inquirer. Invoke the application with the command "node index.js."
+  #### From the command line, run npm install inquirer. 
+  #### Invoke the application with the command "node index.js."
   &nbsp;
 
   ## Usage: 
 
-  #### See the link for a demo: https://drive.google.com
+  #### See this link for an application demo: https://drive.google.com/file/d/1U97BHvOZw7_nLGU2VzB0oAHIlev087Bg/view
   &nbsp;
 
   ## Tests: 
 
   #### From the command line,  run npm init -y,  then  npm install --save-dev jest.
-  #### In package.json, update "test: to "jest".
-  #### Run test from the command line: npm test.
+  #### In package.json, update "test": "echo \"Error: no test specified\" && exit 1" to "test": "jest".
+  #### Run test from the command line with command: npm test.
+   #### See this link for testing demo: https://drive.google.com/file/d/1ML9wx8kqKmbNPWEB_F85NMpFfuGSlaTV/view
   &nbsp;
   
   ## Questions?
